@@ -11,5 +11,5 @@ RUN curl -O https://download.jboss.org/wildfly/${VERSION}/wildfly-${VERSION}.zip
     && rm ${WILDFLY_HOME}/bin/standalone.conf \
     && chmod a+x ${WILDFLY_HOME}/bin/standalone.sh
 ADD standalone.conf ${WILDFLY_HOME}/bin/
-#ENTRYPOINT ${WILDFLY_HOME}/bin/standalone.sh -b=0.0.0.0 --debug
+ENTRYPOINT ${WILDFLY_HOME}/bin/standalone.sh -b=0.0.0.0 --debug
 EXPOSE 8080
